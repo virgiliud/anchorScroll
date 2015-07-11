@@ -21,9 +21,9 @@ A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets 
 ```
 ##Data Attributes Settings
 
-- `data-class-to`: Element to which a class is added on scroll events (use `this` to target the anchor link element)
+- `data-class-to`: Element to which a class is added on scroll events (use `this` to target the element)
 - `data-on-scroll`: Class added to selected element on scroll
-- `data-scroll-end`: Class added to selected element on scroll end
+- `data-scroll-end`: Class added to selected element after scroll
 
 ### HTML Examples
 
@@ -31,7 +31,7 @@ Set up elements via data attributes:
 
 ```html
 <!-- Add class "blur-effect" to body on scroll --> 
-<a href="#test" class="anchor-scroll" data-class-to="body" data-on-scroll="blur-effect"></a>
+<a href="#test-1" class="anchor-scroll" data-class-to="body" data-on-scroll="blur-effect"></a>
 
 <!-- Add class "bounce" to anchor target (#test-2 div) at end of scroll --> 
 <a href="#test-2" class="anchor-scroll" data-class-to="#test-2" data-scroll-end="bounce"></a>
