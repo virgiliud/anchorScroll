@@ -2,6 +2,8 @@
 
 A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets and adding classes to elements on scroll events.
 
+[View Demo](http://www.virgiliudiaconu.com/work/anchor-scroll/)
+
 ## Usage
 
 ### Initialization & Settings
