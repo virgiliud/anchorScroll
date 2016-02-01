@@ -38,7 +38,7 @@ Set up elements via data attributes:
 <a href="#div-1" class="anchor-scroll" data-class-to="body" data-on-scroll="blur-effect"></a>
 
 <!-- Add class "bounce" to anchor target (#div-2) at end of scroll --> 
-<a href="#div-2" class="anchor-scroll" data-class-to="#test-2" data-scroll-end="bounce"></a>
+<a href="#div-2" class="anchor-scroll" data-class-to="#div-2" data-scroll-end="bounce"></a>
 ```
 
 
