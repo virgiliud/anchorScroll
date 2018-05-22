@@ -21,7 +21,7 @@ A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets 
     }
  });
 ```
-##Data Attributes Settings
+## Data Attributes Settings
 
 Add data attributes to your anchor link. 
 
@@ -42,11 +42,11 @@ Set up elements via data attributes:
 ```
 
 
-##License
+## License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Virgiliu Diaconu
+Copyright (c) 2018 Virgiliu Diaconu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
