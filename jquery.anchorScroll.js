@@ -5,8 +5,18 @@
  * http://www.virgiliu.com
  * Licensed under the MIT license.
  */
-;
-(function($, window, document, undefined) {
+;(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		// AMD. Register as an anonymous module depending on jQuery.
+		define(["jquery"], factory , window,document);
+	} else if (typeof exports === "object") {
+		// Node/CommonJS
+		module.exports = factory(require("jquery"),window,document);
+	} else {
+		// No AMD. Register plugin with global jQuery object.
+		factory(jQuery,window,document);
+	}
+})(function($, window, document, undefined) {
     'use strict';
     $.anchorScroll = function(el, options) {
         var base = this;
@@ -62,4 +72,4 @@
         });
     };
 
-})(jQuery, window, document);
+});

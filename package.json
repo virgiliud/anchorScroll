@@ -1,0 +1,19 @@
+{
+  "name": "jqueryachorscroll",
+  "version": "1.0.0",
+  "description": "A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets and adding classes to elements on scroll events.",
+  "main": "jquery.anchorScroll.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virgiliud/jquery.anchorScroll.git"
+  },
+  "author": "Virgiliu Diaconu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virgiliud/jquery.anchorScroll/issues"
+  },
+  "homepage": "https://github.com/virgiliud/jquery.anchorScroll#readme",
+  "scripts":{
+    "compress": "uglifyjs jquery.anchorScroll.js -o jquery.anchorScroll.min.js"
+  }
+}
