@@ -19,7 +19,7 @@ Example with all the available options and their default values:
 ```js
  $('.anchor-scroll').anchorScroll({
     scrollSpeed: 800, // scroll speed
-    offsetTop: 0, // offset is pixels for fixed top navigation bars
+    offsetTop: 0, // offset in pixels for fixed top navigation bars
     scrollStart: function () {
       // callback on scroll start
     },
