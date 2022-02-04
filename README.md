@@ -1,6 +1,6 @@
 # jquery.anchorScroll
 
-A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets and adding classes to elements on scroll events.
+A lightweight jQuery plugin for smooth scrolling to anchor links targets and adding classes to elements on scroll events.
 
 [View Demo](http://www.virgiliudiaconu.com/work/anchor-scroll/)
 
@@ -23,11 +23,11 @@ A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets 
 ```
 ### Data Attributes
 
-- `data-class-to`: Element to which a class is added on scroll events. Include the dot(.) or hash(#) in the selector. `data-class-to` is not required if you are adding the class to the anchor link's target. Optional: use `this` as the value to add the class to the clicked anchor link itself.
-- `data-scroll-start`: The class added when scrolling starts (the class is removed after scrolling ends).
-- `data-scroll-end`: The class added after scrolling ends (the class is removed when scrolling starts again).
-- `data-keep-start`: Use the attribute to keep the class that is added when scrolling starts.
-- `data-keep-end`: Use the attribute to keep the class that is added when scrolling ends.
+- `data-class-to`: Element to which a class is added on scroll events. Include the dot(.) or hash(#) in the selector. `data-class-to` is not required if you are adding the class to the anchor link's target. Set the value to `this` as the value to add the class to the clicked anchor link itself.
+- `data-scroll-start`: Class added when scrolling starts (the class is removed after scrolling ends).
+- `data-scroll-end`: Class added after scrolling ends (the class is removed when scrolling starts again).
+- `data-keep-start`: (boolean) Keep the class that is added when scrolling starts. The attribute does not require a value.
+- `data-keep-end`: (boolean) Keep the class that is added when scrolling ends. The attribute does not require a value.
 
 ### HTML Examples
 
@@ -35,11 +35,11 @@ Adding data attributes to anchor links:
 
 ```html
 <!-- Add class "collapse" to the anchor link's target (#div-1) after scrolling ends -->
-<a href="#div-1" class="anchor-scroll" data-scroll-end="collapse"></a>
+<a class="anchor-scroll" href="#div-1" data-scroll-end="collapse"></a>
 
 <!-- Add class "blur-effect" to the body on scroll -->
-<a href="#div-2" class="anchor-scroll" data-scroll-start="blur-effect" data-class-to="body"></a>
+<a class="anchor-scroll" href="#div-2" class="anchor-scroll" data-scroll-start="blur-effect" data-class-to="body"></a>
 
 <!-- Add class "seen" to the anchor link's target (#div-3) after scrolling ends and keep the class "seen" -->
-<a href="#div-3" class="anchor-scroll" data-scroll-end="seen" data-keep-end></a>
+<a class="anchor-scroll" href="#div-3" class="anchor-scroll" data-scroll-end="seen" data-keep-end></a>
 ```
