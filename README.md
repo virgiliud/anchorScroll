@@ -30,9 +30,9 @@ Example with all the available options and their default values:
 ```
 ### Data Attributes
 
-- `data-class-to`: Element to which a class is added on scroll events. Include the dot(.) or hash(#) in the value. `data-class-to` is not required if you are adding the class to the anchor link's target. Set the value to `this` as the value to add the class to the clicked anchor link itself.
-- `data-scroll-start`: Class added when scrolling starts (the class is removed after scrolling ends).
-- `data-scroll-end`: Class added after scrolling ends (the class is removed when scrolling starts again).
+- `data-class-to`: The element to which a class is added on scroll events. Include the dot(.) or hash(#) in the value. `data-class-to` is not required if you are adding the class to the anchor link's target. Set `this` as the value to add the class to the clicked anchor link itself.
+- `data-scroll-start`: Class added when scrolling starts (the class is removed when scrolling ends).
+- `data-scroll-end`: Class added when scrolling ends (the class is removed when scrolling starts again).
 - `data-keep-start`: (boolean) Keep the class that is added when scrolling starts. The attribute does not require a value.
 - `data-keep-end`: (boolean) Keep the class that is added when scrolling ends. The attribute does not require a value.
 
