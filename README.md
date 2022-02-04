@@ -8,8 +8,15 @@ A lightweight jQuery plugin for smooth scrolling to anchor link targets and addi
 
 ### Initialization
 
-```js
+Add `anchorScroll()` to the element selector of your choice:
 
+```js
+ $('.anchor-scroll').anchorScroll();
+```
+
+Example with all the available options:
+
+```js
  $('.anchor-scroll').anchorScroll({
     scrollSpeed: 800, // scroll speed
     offsetTop: 0, // offset for fixed top navigation bars (defaults to 0)
