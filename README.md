@@ -14,12 +14,12 @@ Add `anchorScroll()` to the element selector of your choice:
  $('.anchor-scroll').anchorScroll();
 ```
 
-Example with all the available options:
+Example with all the available options and their default values:
 
 ```js
  $('.anchor-scroll').anchorScroll({
     scrollSpeed: 800, // scroll speed
-    offsetTop: 0, // offset for fixed top navigation bars (defaults to 0)
+    offsetTop: 0, // offset for fixed top navigation bars
     scrollStart: function () {
       // callback on scroll start
     },
