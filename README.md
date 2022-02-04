@@ -1,6 +1,6 @@
 # jquery.anchorScroll
 
-A lightweight jQuery plugin for smooth scrolling to anchor links targets and adding classes to elements on scroll events.
+A lightweight jQuery plugin for smooth scrolling to anchor link targets and adding classes to elements on scroll events.
 
 [View Demo](http://www.virgiliudiaconu.com/work/anchor-scroll/)
 
