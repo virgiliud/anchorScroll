@@ -6,60 +6,40 @@ A lightweight, easy-to-use jQuery plugin for smooth scrolling to anchor targets 
 
 ## Usage
 
-### Initialization & Settings
+### Initialization
 
 ```js
 
  $('.anchor-scroll').anchorScroll({
     scrollSpeed: 800, // scroll speed
-    offsetTop: 0, // offset for fixed top bars (defaults to 0)
-    onScroll: function () { 
+    offsetTop: 0, // offset for fixed top navigation bars (defaults to 0)
+    scrollStart: function () {
       // callback on scroll start
     },
-    scrollEnd: function () { 
+    scrollEnd: function () {
       // callback on scroll end
     }
  });
 ```
-## Data Attributes Settings
+### Data Attributes
 
-Add data attributes to your anchor link. 
-
-- `data-class-to`: Element to which a class is added on scroll events (enter `this` as the value to target the anchor link itself)
-- `data-on-scroll`: Class added to the selected element while scrolling
-- `data-scroll-end`: Class added to the selected element after scroll ends
+- `data-class-to`: Element to which a class is added on scroll events. Include the dot(.) or hash(#) in the selector. `data-class-to` is not required if you are adding the class to the anchor link's target. Optional: use `this` as the value to add the class to the clicked anchor link itself.
+- `data-scroll-start`: The class added when scrolling starts (the class is removed after scrolling ends).
+- `data-scroll-end`: The class added after scrolling ends (the class is removed when scrolling starts again).
+- `data-keep-start`: Use the attribute to keep the class that is added when scrolling starts.
+- `data-keep-end`: Use the attribute to keep the class that is added when scrolling ends.
 
 ### HTML Examples
 
-Set up elements via data attributes:
+Adding data attributes to anchor links:
 
 ```html
-<!-- Add class "blur-effect" to body on scroll --> 
-<a href="#div-1" class="anchor-scroll" data-class-to="body" data-on-scroll="blur-effect"></a>
+<!-- Add class "collapse" to the anchor link's target (#div-1) after scrolling ends -->
+<a href="#div-1" class="anchor-scroll" data-scroll-end="collapse"></a>
 
-<!-- Add class "bounce" to anchor target (#div-2) at end of scroll --> 
-<a href="#div-2" class="anchor-scroll" data-class-to="#div-2" data-scroll-end="bounce"></a>
+<!-- Add class "blur-effect" to the body on scroll -->
+<a href="#div-2" class="anchor-scroll" data-scroll-start="blur-effect" data-class-to="body"></a>
+
+<!-- Add class "seen" to the anchor link's target (#div-3) after scrolling ends and keep the class "seen" -->
+<a href="#div-3" class="anchor-scroll" data-scroll-end="seen" data-keep-end></a>
 ```
-
-
-## License
-
-The MIT License (MIT)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
