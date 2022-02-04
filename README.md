@@ -1,6 +1,6 @@
 # jquery.anchorScroll
 
-A lightweight jQuery plugin for smooth scrolling to anchor link targets and adding classes to elements on scroll events.
+A lightweight jQuery plugin for smooth scrolling to anchor link targets and adding custom classes.
 
 [View Demo](http://www.virgiliudiaconu.com/work/anchor-scroll/)
 
@@ -30,9 +30,9 @@ Example with all the available options and their default values:
 ```
 ### Data Attributes
 
-- `data-class-to`: The element to which a class is added on scroll events. Include the dot(.) or hash(#) in the value. `data-class-to` is not required if you are adding the class to the anchor link's target. Set `this` as the value to add the class to the clicked anchor link itself.
-- `data-scroll-start`: Class added when scrolling starts (the class is removed when scrolling ends).
-- `data-scroll-end`: Class added when scrolling ends (the class is removed when scrolling starts again).
+- `data-class-to`: (string) The element to which a class is added on scroll events. Include the dot(.) or hash(#) in the value. `data-class-to` is not required if you are adding the class to the anchor link's target. Set `this` as the value to add the class to the clicked anchor link itself.
+- `data-scroll-start`: (string) Class name added when scrolling starts (the class is removed when scrolling ends).
+- `data-scroll-end`: (string) Class name added when scrolling ends (the class is removed when scrolling starts again).
 - `data-keep-start`: (boolean) Keep the class that is added when scrolling starts. The attribute does not require a value.
 - `data-keep-end`: (boolean) Keep the class that is added when scrolling ends. The attribute does not require a value.
 
@@ -47,6 +47,6 @@ Adding data attributes to anchor links:
 <!-- Add class "blur-effect" to the body on scroll -->
 <a class="anchor-scroll" href="#div-2" class="anchor-scroll" data-scroll-start="blur-effect" data-class-to="body"></a>
 
-<!-- Add class "seen" to the anchor link's target (#div-3) after scrolling ends and keep the class "seen" -->
+<!-- Add class "seen" to the anchor link's target (#div-3) after scrolling ends and keep the class -->
 <a class="anchor-scroll" href="#div-3" class="anchor-scroll" data-scroll-end="seen" data-keep-end></a>
 ```
