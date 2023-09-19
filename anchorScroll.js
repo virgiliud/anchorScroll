@@ -31,11 +31,16 @@ class AnchorScroll {
                 }
   
                 const targetElement = classTo ? document.querySelector(classTo) : anchorHash;
-  
+
                 if (targetElement) {
-                    targetElement.classList.add(scrollStart);
-                    if (!this.el.hasAttribute('data-keep-end')) {
-                        targetElement.classList.remove(scrollEnd);
+                    if (scrollStart) {
+                        const startClasses = scrollStart.split(' ');
+                        startClasses.forEach(cls => targetElement.classList.add(cls));
+                    }
+                
+                    if (!this.el.hasAttribute('data-keep-end') && scrollEnd) {
+                        const endClasses = scrollEnd.split(' ');
+                        endClasses.forEach(cls => targetElement.classList.remove(cls));
                     }
                 }
   
@@ -50,12 +55,19 @@ class AnchorScroll {
                     if (lastScrollTop === window.scrollY) {
                         clearInterval(checkScrollEnd);
                         if (targetElement) {
-                            targetElement.classList.add(scrollEnd);
-                            if (!this.el.hasAttribute('data-keep-start')) {
-                                targetElement.classList.remove(scrollStart);
+                            // Split and add/remove scrollEnd classes if it's not null
+                            if (scrollEnd) {
+                                const endClasses = scrollEnd.split(' ');
+                                endClasses.forEach(cls => targetElement.classList.add(cls));
+                            }
+
+                            if (!this.el.hasAttribute('data-keep-start') && scrollStart) {
+                                // Split and add/remove scrollStart classes if it's not null
+                                const startClasses = scrollStart.split(' ');
+                                startClasses.forEach(cls => targetElement.classList.remove(cls));
                             }
                         }
-  
+
                         if (typeof this.options.scrollEnd === 'function') {
                             this.options.scrollEnd.call(this.el);
                         }
