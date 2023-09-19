@@ -1,6 +1,6 @@
-# jquery.anchorScroll
+# anchorScroll.js
 
-A lightweight jQuery plugin for smooth scrolling to anchor link targets while adding custom classes to elements and invoking callbacks.
+A lightweight JavaScript utility for smooth scrolling to anchor link targets while adding custom classes to elements and invoking callbacks.
 
 [View Demo](http://www.virgiliudiaconu.com/work/anchor-scroll/)
 
@@ -8,26 +8,27 @@ A lightweight jQuery plugin for smooth scrolling to anchor link targets while ad
 
 ### Initialization
 
-Add `anchorScroll()` to the element selector of your choice:
+Initialize the functionality on elements with the class `.anchor-scroll`:
 
 ```js
- $('.anchor-scroll').anchorScroll();
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.anchor-scroll');
+    
+    elements.forEach(el => {
+        new AnchorScroll(el, {
+            scrollSpeed: 800, // scroll speed
+            offsetTop: 0, // offset for fixed top navigation bars
+            scrollStart: function() {
+                console.log('scroll start');
+            },
+            scrollEnd: function() {
+                console.log('scroll end');
+            }
+        });
+    });
+});
 ```
 
-Example with all the available options and their default values:
-
-```js
- $('.anchor-scroll').anchorScroll({
-    scrollSpeed: 800, // scroll speed
-    offsetTop: 0, // offset in pixels for fixed top navigation bars
-    scrollStart: function () {
-      // callback on scroll start
-    },
-    scrollEnd: function () {
-      // callback on scroll end
-    }
- });
-```
 ### Data Attributes
 
 - `data-class-to`: (string) The element to which a class is added on scroll events. Include the dot(.) or hash(#) in the value. `data-class-to` is not required if you are adding the class to the anchor link's target. Set `this` as the value to add the class to the clicked anchor link itself.
@@ -45,8 +46,8 @@ Adding data attributes to anchor links:
 <a class="anchor-scroll" href="#div-1" data-scroll-end="collapse"></a>
 
 <!-- Add class "blur-effect" to the body on scroll -->
-<a class="anchor-scroll" href="#div-2" class="anchor-scroll" data-scroll-start="blur-effect" data-class-to="body"></a>
+<a class="anchor-scroll" href="#div-2" data-scroll-start="blur-effect" data-class-to="body"></a>
 
 <!-- Add class "seen" to the anchor link's target (#div-3) after scrolling ends and keep the class -->
-<a class="anchor-scroll" href="#div-3" class="anchor-scroll" data-scroll-end="seen" data-keep-end></a>
+<a class="anchor-scroll" href="#div-3" data-scroll-end="seen" data-keep-end></a>
 ```
