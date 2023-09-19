@@ -56,14 +56,13 @@ class AnchorScroll {
                   if (typeof this.options.scrollEnd === 'function') {
                       this.options.scrollEnd.call(this.el);
                   }
-              }, this.options.scrollSpeed);
+              }, 800);
           }
       });
   }
 }
 
 AnchorScroll.defaultOptions = {
-  scrollSpeed: 800,
   offsetTop: 0
 };
 

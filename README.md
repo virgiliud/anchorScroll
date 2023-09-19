@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     elements.forEach(el => {
         new AnchorScroll(el, {
-            scrollSpeed: 800, // scroll speed
             offsetTop: 0, // offset for fixed top navigation bars
             scrollStart: function() {
                 console.log('scroll start');
